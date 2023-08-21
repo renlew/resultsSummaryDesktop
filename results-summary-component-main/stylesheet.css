@@ -2,6 +2,8 @@ body {
     background-color: hsl(221, 100%, 96%);
     font-size: 18px;
     font-family: 'Hanken Grotesk', sans-serif;
+    height: 100%;
+    display: flexbox;
 }
 
 .main {
@@ -11,12 +13,15 @@ body {
     height: 600px;
     /*display: block;
     margin-left: auto;
-    margin-right: auto;
-    width: 45%;*/
+    margin-right: auto;*/
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-flow: row;
 }
+
+/* RESULT SECTION */
 
 .main .result {
     background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
@@ -40,12 +45,35 @@ body {
 .main .result .seventySix {
     font-weight: 800;
     font-size: 60px;
+    white-space: pre-wrap;
 }
 
 .main .result .great {
     font-weight: 700;
     font-size: 30px;
 }
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;*/
+    /*white-space: pre-wrap;*/
+}
+
+/* LOOK INTO WRAPPING TEXT WITHIN THE CIRCLE...commented test above*/
+
+
+
+/* SUMMARY SECTION*/
 
 .summary {
     float: right;
@@ -57,30 +85,65 @@ body {
     width: 40%;
 }
 
-.circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* commenting this out to try flexbox
-.main .summary .reaction {
-    background-color: hsl(0, 100%, 95%);
-    width: 250px;
-    height: 50px;
-    border-radius: 10px;
-    margin: 0;
-    position: absolute;
-    top: 20%;
-    left: 61%;
-    transform: translate(-50%, -50%);
-}*/
-
 svg, p {
     display: inline-block;
+}
+
+svg {
+    padding-right: 10px;
+}
+
+.label {
+    padding-right: 70px;
+}
+
+.colorBox {
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#reaction {
+    background-color: hsl(0, 100%, 95%);
+}
+
+#r {
+    color: hsl(0, 100%, 67%);
+}
+
+#memory {
+    background-color: hsl(39, 100%, 95%);
+}
+
+#m {
+    color: hsl(39, 100%, 56%);
+}
+
+#verbal {
+    background-color: hsl(166, 100%, 95%);
+}
+
+#ve {
+    color: hsl(166, 100%, 37%);
+}
+
+#visual {
+    background-color: hsl(234, 85%, 95%);
+}
+
+#vi {
+    color: hsl(234, 85%, 45%);
+}
+
+.continue {
+    width: 250px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+    background-color: hsl(224, 30%, 27%);
+    color: hsl(0, 0%, 100%);
+    text-align: center;
 }
